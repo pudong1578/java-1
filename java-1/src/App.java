@@ -2,14 +2,16 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        System.err.print("정수를 입력하세요 : ");
-        int s = scanner.nextInt();
-        int m = s / 60;
-        s %= 60;
-        int h = m / 60;
-        m %= 60;
-
-        System.err.printf("%d시간 %d분 %d초", h, m, s);
+        int a=3, b=3, c=3;
+        a += b;
+        System.out.println(a+" / "+b);
+        a-=b;
+        System.out.println(a+" / "+b);
+        b = a++;
+        System.out.println(a+" / "+b);
+        a = ++b;
+        System.out.println(b+" / "+a);
+        a = c++;
+        System.out.println(a+" / "+b);
     }
 }

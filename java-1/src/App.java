@@ -3,15 +3,20 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
-        System.out.println("정수 5개를 입력하세요.");
         
-        int sum = 0;
-        for(int i = 0; i < 5; i++){
-            int n = scan.nextInt();
-            if(n<=0) {continue;}
-            else {sum+=n;}
+        int intArr[];
+        intArr = new int[5];
+
+        int max = 0;
+        System.out.println("양수 5개를 입력하세요.");
+
+        for(int i = 0 ; i < 5; i++){
+            intArr[i] = scan.nextInt();
+            if(intArr[i] > max){
+                max = intArr[i];
+            }
         }
-        
-        System.out.println("양수의 합은 : " + sum);
+        System.out.println("가장 큰 수는 " + max + "입니다.");
+        scan.close();
     }
 }

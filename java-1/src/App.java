@@ -1,24 +1,19 @@
 import java.util.Scanner;
 
 public class App {
+    static int[] makeArray(){
+        int temp[] = new int[4];
+        for(int i = 0; i < 4; i++){
+            temp[i] = i;
+        }
+        return temp;
+    }
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
-        
-        int intArr[];
-        intArr = new int[5];
-
-        System.out.println("양수 5개를 입력하세요.");
-
-        for(int i = 0 ; i < 5; i++){
-            intArr[i] = scan.nextInt();
-            
+        int intArray[] = makeArray();
+        for(int i = 0; i < 4; i++){
+            System.out.print(intArray[i] + " ");
         }
-        double sum = 0.0;
-        for(int i = 0; i < 5; i++){
-            sum += intArr[i];
-        }
-        
-        System.out.println("평균은 " + sum / 5);
         scan.close();
     }
 }

@@ -5,13 +5,13 @@ public class App {
         Scanner scan = new Scanner(System.in);
         System.out.println("정수 5개를 입력하세요.");
         
-        while (true) {
-            System.out.print(">>");
-            String text = scan.nextLine();
-            if(text.equals("exit")) {break;}
+        int sum = 0;
+        for(int i = 0; i < 5; i++){
+            int n = scan.nextInt();
+            if(n<=0) {continue;}
+            else {sum+=n;}
         }
-
-        System.out.println("종료합니다...");
-        scan.close();
+        
+        System.out.println("양수의 합은 : " + sum);
     }
 }

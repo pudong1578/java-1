@@ -1,25 +1,20 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
+
+class Ractangle{
+    int width;
+    int hight;
+    public int getArea(){
+        return width *  hight;
+    }
+}
 
 public class App {
     public static void main(String[] args){
+        Ractangle rect = new Ractangle();
         Scanner scan = new Scanner(System.in);
-        System.out.println("정수3개를 입력하세요");
-        int sum=0,n=0;
-        for(int i =0; i<3;i++){
-            System.out.print(">>");
-            try{
-                n = scan.nextInt();
-            }
-            catch(InputMismatchException a){
-                System.out.println("정수가 아닙니다 다시 입력하세요!");
-                scan.next();
-                i--;
-                continue;
-            }
-            sum += n;
-        }
-        System.out.println("합은 " + sum);
-        scan.close();
+        System.out.print(">> ");
+        rect.width = scan.nextInt();
+        rect.hight = scan.nextInt();
+        System.out.printf("사각형의 넓이는 : %d", rect.getArea());
     }
 }

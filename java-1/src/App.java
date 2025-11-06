@@ -1,20 +1,17 @@
-import java.util.Scanner;
+class Point{
+    private int x,y;
 
-class Ractangle{
-    int width;
-    int hight;
-    public int getArea(){
-        return width *  hight;
+    public Point(int x, int y){
+        this.x = x;
+        this.y = y;
     }
 }
 
-public class App {
+public class App{
     public static void main(String[] args){
-        Ractangle rect = new Ractangle();
-        Scanner scan = new Scanner(System.in);
-        System.out.print(">> ");
-        rect.width = scan.nextInt();
-        rect.hight = scan.nextInt();
-        System.out.printf("사각형의 넓이는 : %d", rect.getArea());
+        Point p = new Point(2,3);
+        System.out.println(p.getClass().getName());
+        System.out.println(p.toString());
+        System.out.println(p.hashCode());
     }
 }
